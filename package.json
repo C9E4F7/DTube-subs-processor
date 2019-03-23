@@ -1,0 +1,23 @@
+{
+  "name": "dtube-subs-processor",
+  "version": "1.0.0",
+  "description": "For processing subtitles for Dtube videos",
+  "main": "subs-processor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.nannal.com/dtube/dtube-subs-processor"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^1.2.1",
+    "ipfs-http-client": "^30.1.0",
+    "node-webvtt": "^1.2.0",
+    "uuid": "^3.3.2",
+    "vtt.js": "^0.13.0",
+    "webvtt": "0.0.2"
+  }
+}
