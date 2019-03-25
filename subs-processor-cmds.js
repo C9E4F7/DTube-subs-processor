@@ -18,18 +18,18 @@ var cmds = {
 
       ipfs.add(testBuffer, function (err, file) {
 
-          if (err) {
-            console.log(err);
-              process.exit();
-            }
-              // updating relevant encoder response fields
-              cmds.setObjPropToValue(cmds.processResponse, prop+".progress", "100.00%");
-              cmds.setObjPropToValue(cmds.processResponse, prop+".lastTimeProgress", Date());
-              cmds.setObjPropToValue(cmds.processResponse, prop+".step", "success");
-              cmds.setObjPropToValue(cmds.processResponse, prop+".hash", file[0].hash);
-              cmds.setObjPropToValue(cmds.processResponse, prop+".fileSize", file[0].size);
+        if (err) {
+          console.log(err);
+          process.exit();
+        }
+        // updating relevant encoder response fields
+        cmds.setObjPropToValue(cmds.processResponse, prop+".progress", "100.00%");
+        cmds.setObjPropToValue(cmds.processResponse, prop+".lastTimeProgress", Date());
+        cmds.setObjPropToValue(cmds.processResponse, prop+".step", "success");
+        cmds.setObjPropToValue(cmds.processResponse, prop+".hash", file[0].hash);
+        cmds.setObjPropToValue(cmds.processResponse, prop+".fileSize", file[0].size);
 
-          });
+      });
     }
 
   },
@@ -38,22 +38,22 @@ var cmds = {
     var i;
     path = path.split(/(?:\.|\[|\])+/);
     for (i = 0; i < path.length - 1; i++)
-        obj = obj[path[i]];
+      obj = obj[path[i]];
 
     obj[path[i]] = value;
   },
 
   processResponse:{
-          "ipfsAddSource": {
-            "progress": "0.00%",
-            "encodeSize": "source",
-            "lastTimeProgress": null,
-            "errorMessage": null,
-            "step": "Started",
-            "positionInQueue": null,
-            "hash": null,
-            "fileSize": null
-          }
+    "ipfsAddSource": {
+      "progress": "0.00%",
+      "encodeSize": "source",
+      "lastTimeProgress": null,
+      "errorMessage": null,
+      "step": "Started",
+      "positionInQueue": null,
+      "hash": null,
+      "fileSize": null
+    }
   },
   checkIfFinished: () => {
 
