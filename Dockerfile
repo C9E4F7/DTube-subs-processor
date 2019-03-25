@@ -14,4 +14,4 @@ ENV IPFSIP  "127.0.0.1"
 ENV IPFSPORT  "5001"
 ENV IPFSPROTOCOL "http"
 
-CMD ["npm", "start"]
+CMD ["node", "subs-processor.js"]

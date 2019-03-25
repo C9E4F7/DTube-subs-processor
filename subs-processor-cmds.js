@@ -1,7 +1,7 @@
 const ipfsAPI = require('ipfs-http-client');
 const fs = require('fs');
 
-var ipfsIp = process.env.IPFSIP || '10.0.106.86';
+var ipfsIp = process.env.IPFSIP || '127.0.0.1';
 var ipfsPort = process.env.IPFSPORT || '5001';
 var ipfsProtocol = process.env.IPFSPROTOCOL || 'http';
 
@@ -42,7 +42,7 @@ var cmds = {
 
     obj[path[i]] = value;
   },
-  
+
   processResponse:{
           "ipfsAddSource": {
             "progress": "0.00%",
