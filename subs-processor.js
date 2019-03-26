@@ -20,7 +20,7 @@ http.createServer(function (req, res) {
   res.setHeader('Access-Control-Allow-Headers', 'Origin, Authorization, Accept');
   res.setHeader('Access-Control-Allow-Headers', 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range');
   res.setHeader('Access-Control-Allow-Methods','GET, POST, OPTIONS');
-	res.setHeader('access-control-allow-origin', corsVar);
+  res.setHeader('access-control-allow-origin', corsVar);
   res.setHeader('Access-Control-Max-Age', '1728000');
   res.setHeader('Connection', 'keep-alive');
 
@@ -96,10 +96,10 @@ http.createServer(function (req, res) {
       });
 
       form.on('error', function(err) {
-				console.error('Error', err)
-				process.exit();
+  console.error('Error', err)
+  process.exit();
   		});
-      
+
     }
 
   } else {
