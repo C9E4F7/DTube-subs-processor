@@ -94,10 +94,10 @@ http.createServer(function (req, res) {
 				}
 
 			});
-
+			
 			form.on('error', function(err) {
-			    console.error('Error', err);
-			    process.exit();
+                console.error('Error', err);
+                process.exit();
 			});
 
 		}
